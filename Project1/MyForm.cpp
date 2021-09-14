@@ -239,6 +239,37 @@ System::Void Project1::MyForm::constr() {
     {
         dataGridView4[1, 0]->Value += Convert::ToString(gd[0].time[i]);
     }
+
+    //Добавим в КомбоБоксы
+    for (int i = 0; i < n_k; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(ks[i].fio); j++)
+        {
+            temp += ks[i].fio[j];
+        }
+        comboBox1->Items->Add(temp);
+    }
+    for (int i = 0; i < n_i; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(ins[i].fio); j++)
+        {
+            temp += ins[i].fio[j];
+        }
+        comboBox2->Items->Add(temp);
+    }
+    comboBox3->Items->Add("Практика");
+    comboBox3->Items->Add("Экзамен");
+    for (int i = 0; i < n_c; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(cr[i].num); j++)
+        {
+            temp += cr[i].num[j];
+        }
+        comboBox4->Items->Add(temp);
+    }
 };
 
 System::Void Project1::MyForm::MyForm_Load(System::Object^ sender, System::EventArgs^ e)
