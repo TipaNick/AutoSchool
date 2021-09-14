@@ -998,6 +998,7 @@ namespace Project1 {
 			this->Controls->Add(this->tabControl1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
@@ -1018,5 +1019,8 @@ namespace Project1 {
 
 		}
 #pragma endregion
-	};
+	private:
+		System::Void constr();
+		System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e);
+};
 }
