@@ -43,7 +43,7 @@ namespace Project1 {
 	private: System::Windows::Forms::TabPage^ tabPage5;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button2;
+
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::Label^ label5;
@@ -68,7 +68,7 @@ namespace Project1 {
 
 
 	private: System::Windows::Forms::Button^ button13;
-	private: System::Windows::Forms::Button^ button14;
+
 	private: System::Windows::Forms::Button^ button15;
 	private: System::Windows::Forms::Label^ label19;
 
@@ -83,10 +83,10 @@ namespace Project1 {
 
 
 
-	private: System::Windows::Forms::TextBox^ textBox11;
-	private: System::Windows::Forms::Label^ label11;
+
+
 	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Button^ button5;
+
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::TextBox^ textBox6;
 	private: System::Windows::Forms::Label^ label6;
@@ -103,7 +103,7 @@ namespace Project1 {
 	private: System::Windows::Forms::TextBox^ textBox12;
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Button^ button7;
-	private: System::Windows::Forms::Button^ button8;
+
 	private: System::Windows::Forms::Button^ button9;
 	private: System::Windows::Forms::DataGridView^ dataGridView3;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ num_car;
@@ -113,7 +113,7 @@ namespace Project1 {
 	private: System::Windows::Forms::TextBox^ textBox15;
 	private: System::Windows::Forms::Label^ label15;
 	private: System::Windows::Forms::Button^ button10;
-	private: System::Windows::Forms::Button^ button11;
+
 	private: System::Windows::Forms::Button^ button12;
 	private: System::Windows::Forms::DataGridView^ dataGridView4;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ fio_g;
@@ -153,10 +153,10 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 		{
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
 			this->button13 = (gcnew System::Windows::Forms::Button());
-			this->button14 = (gcnew System::Windows::Forms::Button());
 			this->button15 = (gcnew System::Windows::Forms::Button());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
@@ -173,7 +173,6 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->car = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -192,10 +191,7 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->phone_k = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->category = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
-			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
@@ -219,7 +215,6 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->button7 = (gcnew System::Windows::Forms::Button());
-			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
 			this->num_car = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -230,12 +225,10 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->button10 = (gcnew System::Windows::Forms::Button());
-			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->button12 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
 			this->fio_g = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->time_g = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->tabControl1->SuspendLayout();
 			this->tabPage4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->BeginInit();
@@ -269,7 +262,6 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->tabPage4->Controls->Add(this->label20);
 			this->tabPage4->Controls->Add(this->comboBox4);
 			this->tabPage4->Controls->Add(this->button13);
-			this->tabPage4->Controls->Add(this->button14);
 			this->tabPage4->Controls->Add(this->button15);
 			this->tabPage4->Controls->Add(this->label19);
 			this->tabPage4->Controls->Add(this->label18);
@@ -285,6 +277,13 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Запись";
 			this->tabPage4->UseVisualStyleBackColor = true;
+			// 
+			// dateTimePicker1
+			// 
+			this->dateTimePicker1->Location = System::Drawing::Point(283, 306);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(121, 20);
+			this->dateTimePicker1->TabIndex = 21;
 			// 
 			// label20
 			// 
@@ -311,15 +310,7 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->button13->TabIndex = 17;
 			this->button13->Text = L"Удалить";
 			this->button13->UseVisualStyleBackColor = true;
-			// 
-			// button14
-			// 
-			this->button14->Location = System::Drawing::Point(292, 358);
-			this->button14->Name = L"button14";
-			this->button14->Size = System::Drawing::Size(100, 46);
-			this->button14->TabIndex = 16;
-			this->button14->Text = L"Изменить";
-			this->button14->UseVisualStyleBackColor = true;
+			this->button13->Click += gcnew System::EventHandler(this, &MyForm::button13_Click);
 			// 
 			// button15
 			// 
@@ -441,7 +432,6 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			// tabPage1
 			// 
 			this->tabPage1->Controls->Add(this->button3);
-			this->tabPage1->Controls->Add(this->button2);
 			this->tabPage1->Controls->Add(this->button1);
 			this->tabPage1->Controls->Add(this->textBox5);
 			this->tabPage1->Controls->Add(this->label5);
@@ -470,15 +460,7 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->button3->TabIndex = 14;
 			this->button3->Text = L"Удалить";
 			this->button3->UseVisualStyleBackColor = true;
-			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(292, 358);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(100, 46);
-			this->button2->TabIndex = 13;
-			this->button2->Text = L"Изменить";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
 			// button1
 			// 
@@ -617,10 +599,7 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			// 
 			// tabPage2
 			// 
-			this->tabPage2->Controls->Add(this->textBox11);
-			this->tabPage2->Controls->Add(this->label11);
 			this->tabPage2->Controls->Add(this->button4);
-			this->tabPage2->Controls->Add(this->button5);
 			this->tabPage2->Controls->Add(this->button6);
 			this->tabPage2->Controls->Add(this->textBox6);
 			this->tabPage2->Controls->Add(this->label6);
@@ -641,22 +620,6 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->tabPage2->Text = L"Инструктора";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
-			// textBox11
-			// 
-			this->textBox11->Location = System::Drawing::Point(436, 288);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(100, 20);
-			this->textBox11->TabIndex = 29;
-			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(433, 272);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(48, 13);
-			this->label11->TabIndex = 28;
-			this->label11->Text = L"Машина";
-			// 
 			// button4
 			// 
 			this->button4->Location = System::Drawing::Point(436, 358);
@@ -665,15 +628,7 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->button4->TabIndex = 27;
 			this->button4->Text = L"Удалить";
 			this->button4->UseVisualStyleBackColor = true;
-			// 
-			// button5
-			// 
-			this->button5->Location = System::Drawing::Point(292, 358);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(100, 46);
-			this->button5->TabIndex = 26;
-			this->button5->Text = L"Изменить";
-			this->button5->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
 			// button6
 			// 
@@ -683,6 +638,7 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->button6->TabIndex = 25;
 			this->button6->Text = L"Добавить";
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
 			// 
 			// textBox6
 			// 
@@ -816,7 +772,6 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->tabPage3->Controls->Add(this->textBox12);
 			this->tabPage3->Controls->Add(this->label12);
 			this->tabPage3->Controls->Add(this->button7);
-			this->tabPage3->Controls->Add(this->button8);
 			this->tabPage3->Controls->Add(this->button9);
 			this->tabPage3->Controls->Add(this->dataGridView3);
 			this->tabPage3->Location = System::Drawing::Point(4, 22);
@@ -866,15 +821,7 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->button7->TabIndex = 30;
 			this->button7->Text = L"Удалить";
 			this->button7->UseVisualStyleBackColor = true;
-			// 
-			// button8
-			// 
-			this->button8->Location = System::Drawing::Point(292, 358);
-			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(100, 46);
-			this->button8->TabIndex = 29;
-			this->button8->Text = L"Изменить";
-			this->button8->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
 			// 
 			// button9
 			// 
@@ -884,6 +831,7 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->button9->TabIndex = 28;
 			this->button9->Text = L"Добавить";
 			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
 			// 
 			// dataGridView3
 			// 
@@ -921,7 +869,6 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->tabPage5->Controls->Add(this->textBox15);
 			this->tabPage5->Controls->Add(this->label15);
 			this->tabPage5->Controls->Add(this->button10);
-			this->tabPage5->Controls->Add(this->button11);
 			this->tabPage5->Controls->Add(this->button12);
 			this->tabPage5->Controls->Add(this->dataGridView4);
 			this->tabPage5->Location = System::Drawing::Point(4, 22);
@@ -971,15 +918,7 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->button10->TabIndex = 37;
 			this->button10->Text = L"Удалить";
 			this->button10->UseVisualStyleBackColor = true;
-			// 
-			// button11
-			// 
-			this->button11->Location = System::Drawing::Point(292, 358);
-			this->button11->Name = L"button11";
-			this->button11->Size = System::Drawing::Size(100, 46);
-			this->button11->TabIndex = 36;
-			this->button11->Text = L"Изменить";
-			this->button11->UseVisualStyleBackColor = true;
+			this->button10->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
 			// 
 			// button12
 			// 
@@ -989,6 +928,7 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->button12->TabIndex = 35;
 			this->button12->Text = L"Добавить";
 			this->button12->UseVisualStyleBackColor = true;
+			this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click);
 			// 
 			// dataGridView4
 			// 
@@ -1018,13 +958,6 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 			this->time_g->Name = L"time_g";
 			this->time_g->ReadOnly = true;
 			this->time_g->Width = 200;
-			// 
-			// dateTimePicker1
-			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(283, 306);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(121, 20);
-			this->dateTimePicker1->TabIndex = 21;
 			// 
 			// MyForm
 			// 
@@ -1061,5 +994,13 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 		System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e);
 private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

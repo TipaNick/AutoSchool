@@ -329,7 +329,7 @@ System::Void Project1::MyForm::button15_Click(System::Object^ sender, System::Ev
         n_z++;
     }
 }
-
+//Кнопка добавить в "Курсант"
 System::Void Project1::MyForm::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
     if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == "" || textBox5->Text == "")
@@ -370,6 +370,239 @@ System::Void Project1::MyForm::button1_Click(System::Object^ sender, System::Eve
         dataGridView1[4, n_k]->Value = textBox5->Text;
         n_k++;
         draw_combo();
+    }
+}
+//Кнопка добавить в "Инструктор"
+System::Void Project1::MyForm::button6_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    if (textBox10->Text == "" || textBox9->Text == "" || textBox8->Text == "" || textBox7->Text == "" || textBox6->Text == "")
+    {
+        MessageBox::Show("Запоните все поля", "Ошибка");
+    }
+    else {
+        String^ temp = textBox10->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            ins[n_i].fio[i] += temp[i];
+        }
+
+        ins[n_i].age = Convert::ToInt32(textBox9->Text);
+
+        temp = textBox8->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            ins[n_i].email[i] += temp[i];
+        }
+        temp = textBox7->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            ins[n_i].phone[i] += temp[i];
+        }
+        ins[n_i].exp = Convert::ToInt32(textBox6->Text);
+
+
+        dataGridView2->Rows->Add();
+        dataGridView2[0, n_i]->Value = textBox10->Text;
+        dataGridView2[1, n_i]->Value = textBox9->Text;
+        dataGridView2[2, n_i]->Value = textBox8->Text;
+        dataGridView2[3, n_i]->Value = textBox7->Text;
+        dataGridView2[4, n_i]->Value = textBox6->Text;
+        n_i++;
+        draw_combo();
+    }
+}
+//Кнопка добавить в "Машина"
+System::Void Project1::MyForm::button9_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    if (textBox12->Text == "" || textBox13->Text == "")
+    {
+        MessageBox::Show("Введите все поля", "Ошибка");
+    }
+    else {
+        String^ temp;
+        temp = textBox12->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            cr[n_c].num[i] += temp[i];
+        }
+        temp = textBox13->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            cr[n_c].model[i] += temp[i];
+        }
+        dataGridView3[0, n_c]->Value = textBox12->Text;
+        dataGridView3[1, n_c]->Value = textBox13->Text;
+        n_c++;
+        draw_combo();
+    }
+}
+//Кнопка добавить в "ГИБДД"
+System::Void Project1::MyForm::button12_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    if (textBox15->Text == "" || textBox14->Text == "")
+    {
+        MessageBox::Show("Введите все поля", "Ошибка");
+    }
+    else {
+        String^ temp;
+        temp = textBox15->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            gd[n_g].fio_s[i] += temp[i];
+        }
+        temp = textBox14->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            gd[n_g].time[i] += temp[i];
+        }
+        dataGridView3[0, n_g]->Value = textBox15->Text;
+        dataGridView3[1, n_g]->Value = textBox14->Text;
+        n_g++;
+        draw_combo();
+    }
+}
+//Кнопка удалить в "Записи"
+System::Void Project1::MyForm::button13_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    int num = dataGridView5->CurrentCell->RowIndex;
+    for (int i = num; i <= n_z - 1; i++)
+    {
+        rec[i] = rec[i + 1];
+    }
+    n_z--;
+    dataGridView5->Rows->Clear();
+    for (int i = 0; i < n_z; i++)
+    {
+        dataGridView5->Rows->Add();
+        for (int y = 0; y < wcslen(rec[i].fio_k); y++)
+        {
+            dataGridView5[0, i]->Value += Convert::ToString(rec[i].fio_k[y]);
+        }
+        for (int y = 0; y < wcslen(rec[i].fio_p); y++)
+        {
+            dataGridView5[1, i]->Value += Convert::ToString(rec[i].fio_p[y]);
+        }
+        for (int y = 0; y < wcslen(rec[i].type); y++)
+        {
+            dataGridView5[2, i]->Value += Convert::ToString(rec[i].type[y]);
+        }
+        for (int y = 0; y < wcslen(rec[i].time); y++)
+        {
+            dataGridView5[3, i]->Value += Convert::ToString(rec[i].time[y]);
+        }
+        for (int y = 0; y < wcslen(rec[i].car_num); y++)
+        {
+            dataGridView5[4, i]->Value += Convert::ToString(rec[i].car_num[y]);
+        }
+    }
+}
+//Кнопка удалить в "Курсант"
+System::Void Project1::MyForm::button3_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    int num = dataGridView1->CurrentCell->RowIndex;
+    for (int i = num; i <= n_k - 1; i++)
+    {
+        ks[i] = ks[i + 1];
+    }
+    n_k--;
+    dataGridView1->Rows->Clear();
+    for (int i = 0; i < n_k; i++)
+    {
+        dataGridView1->Rows->Add();
+        for (int y = 0; y < wcslen(ks[i].fio); y++)
+        {
+            dataGridView1[0, i]->Value += Convert::ToString(ks[i].fio[y]);
+        }
+        dataGridView1[1, i]->Value = Convert::ToString(ks[i].age);
+        for (int y = 0; y < wcslen(ks[i].email); y++)
+        {
+            dataGridView1[2, i]->Value += Convert::ToString(ks[i].email[y]);
+        }
+        for (int y = 0; y < wcslen(ks[i].phone); y++)
+        {
+            dataGridView1[3, i]->Value += Convert::ToString(ks[i].phone[y]);
+        }
+        for (int y = 0; y < wcslen(ks[i].category); y++)
+        {
+            dataGridView1[4, i]->Value += Convert::ToString(ks[i].category[y]);
+        }
+    }
+    draw_combo();
+}
+//Кнопка удалить в "Инструктор"
+System::Void Project1::MyForm::button4_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    int num = dataGridView2->CurrentCell->RowIndex;
+    for (int i = num; i <= n_i - 1; i++)
+    {
+        ins[i] = ins[i + 1];
+    }
+    n_i--;
+    dataGridView2->Rows->Clear();
+    for (int i = 0; i < n_i; i++)
+    {
+        dataGridView2->Rows->Add();
+        for (int y = 0; y < wcslen(ins[i].fio); y++)
+        {
+            dataGridView2[0, i]->Value += Convert::ToString(ins[i].fio[y]);
+        }
+        dataGridView2[1, i]->Value = Convert::ToString(ins[i].age);
+        for (int y = 0; y < wcslen(ins[i].email); y++)
+        {
+            dataGridView2[2, i]->Value += Convert::ToString(ins[i].email[y]);
+        }
+        for (int y = 0; y < wcslen(ins[i].phone); y++)
+        {
+            dataGridView2[3, i]->Value += Convert::ToString(ins[i].phone[y]);
+        }
+        dataGridView2[3, i]->Value = Convert::ToString(ins[i].exp);
+    }
+    draw_combo();
+}
+//Кнопка удалить в "Машины"
+System::Void Project1::MyForm::button7_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    int num = dataGridView3->CurrentCell->RowIndex;
+    for (int i = num; i <= n_c - 1; i++)
+    {
+        cr[i] = cr[i + 1];
+    }
+    n_c--;
+    dataGridView3->Rows->Clear();
+    for (int i = 0; i < n_c; i++)
+    {
+        dataGridView3->Rows->Add();
+        for (int y = 0; y < wcslen(cr[i].num); y++)
+        {
+            dataGridView3[0, i]->Value += Convert::ToString(cr[i].num[y]);
+        }
+        for (int y = 0; y < wcslen(cr[i].model); y++)
+        {
+            dataGridView3[1, i]->Value += Convert::ToString(cr[i].model[y]);
+        }
+    }
+}
+//Кнопка удалить в "ГИБДД"
+System::Void Project1::MyForm::button10_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    int num = dataGridView4->CurrentCell->RowIndex;
+    for (int i = num; i <= n_g - 1; i++)
+    {
+        gd[i] = gd[i + 1];
+    }
+    n_g--;
+    dataGridView4->Rows->Clear();
+    for (int i = 0; i < n_g; i++)
+    {
+        dataGridView4->Rows->Add();
+        for (int y = 0; y < wcslen(gd[i].fio_s); y++)
+        {
+            dataGridView4[0, i]->Value += Convert::ToString(gd[i].fio_s[y]);
+        }
+        for (int y = 0; y < wcslen(gd[i].time); y++)
+        {
+            dataGridView4[1, i]->Value += Convert::ToString(gd[i].time[y]);
+        }
     }
 }
 
