@@ -581,6 +581,7 @@ System::Void Project1::MyForm::button7_Click(System::Object^ sender, System::Eve
             dataGridView3[1, i]->Value += Convert::ToString(cr[i].model[y]);
         }
     }
+    draw_combo();
 }
 //Êíîïêà óäàëèòü â "ÃÈÁÄÄ"
 System::Void Project1::MyForm::button10_Click(System::Object^ sender, System::EventArgs^ e)
@@ -604,6 +605,7 @@ System::Void Project1::MyForm::button10_Click(System::Object^ sender, System::Ev
             dataGridView4[1, i]->Value += Convert::ToString(gd[i].time[y]);
         }
     }
+    draw_combo();
 }
 
 
