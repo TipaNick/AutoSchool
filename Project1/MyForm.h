@@ -123,7 +123,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ age_i;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ email_i;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ phone_i;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ exp_i;
-private: System::Windows::Forms::TextBox^ textBox16;
+
 private: System::Windows::Forms::Label^ label20;
 private: System::Windows::Forms::ComboBox^ comboBox4;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ fio_z_k;
@@ -131,6 +131,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ fio_z_i;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ type;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ time;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
+private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 
 
 
@@ -152,6 +153,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 		{
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
 			this->button13 = (gcnew System::Windows::Forms::Button());
 			this->button14 = (gcnew System::Windows::Forms::Button());
 			this->button15 = (gcnew System::Windows::Forms::Button());
@@ -163,6 +166,11 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
+			this->fio_z_k = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->fio_z_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->type = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->time = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->car = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -200,6 +208,11 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->fio_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->age_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->email_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->phone_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->exp_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
 			this->label13 = (gcnew System::Windows::Forms::Label());
@@ -222,19 +235,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 			this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
 			this->fio_g = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->time_g = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->fio_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->age_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->email_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->phone_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->exp_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->fio_z_k = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->fio_z_i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->type = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->time = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->car = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->label20 = (gcnew System::Windows::Forms::Label());
-			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
-			this->textBox16 = (gcnew System::Windows::Forms::TextBox());
+			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->tabControl1->SuspendLayout();
 			this->tabPage4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->BeginInit();
@@ -264,7 +265,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 			// 
 			// tabPage4
 			// 
-			this->tabPage4->Controls->Add(this->textBox16);
+			this->tabPage4->Controls->Add(this->dateTimePicker1);
 			this->tabPage4->Controls->Add(this->label20);
 			this->tabPage4->Controls->Add(this->comboBox4);
 			this->tabPage4->Controls->Add(this->button13);
@@ -284,6 +285,23 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Запись";
 			this->tabPage4->UseVisualStyleBackColor = true;
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Location = System::Drawing::Point(445, 243);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(48, 13);
+			this->label20->TabIndex = 19;
+			this->label20->Text = L"Машина";
+			// 
+			// comboBox4
+			// 
+			this->comboBox4->FormattingEnabled = true;
+			this->comboBox4->Location = System::Drawing::Point(448, 259);
+			this->comboBox4->Name = L"comboBox4";
+			this->comboBox4->Size = System::Drawing::Size(121, 21);
+			this->comboBox4->TabIndex = 18;
 			// 
 			// button13
 			// 
@@ -311,6 +329,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 			this->button15->TabIndex = 15;
 			this->button15->Text = L"Добавить";
 			this->button15->UseVisualStyleBackColor = true;
+			this->button15->Click += gcnew System::EventHandler(this, &MyForm::button15_Click);
 			// 
 			// label19
 			// 
@@ -387,6 +406,38 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 			this->dataGridView5->Size = System::Drawing::Size(689, 211);
 			this->dataGridView5->TabIndex = 0;
 			// 
+			// fio_z_k
+			// 
+			this->fio_z_k->HeaderText = L"ФИО курсанта";
+			this->fio_z_k->Name = L"fio_z_k";
+			this->fio_z_k->ReadOnly = true;
+			this->fio_z_k->Width = 150;
+			// 
+			// fio_z_i
+			// 
+			this->fio_z_i->HeaderText = L"ФИО инструктора";
+			this->fio_z_i->Name = L"fio_z_i";
+			this->fio_z_i->ReadOnly = true;
+			this->fio_z_i->Width = 150;
+			// 
+			// type
+			// 
+			this->type->HeaderText = L"Тип занятия";
+			this->type->Name = L"type";
+			this->type->ReadOnly = true;
+			// 
+			// time
+			// 
+			this->time->HeaderText = L"Время";
+			this->time->Name = L"time";
+			this->time->ReadOnly = true;
+			// 
+			// car
+			// 
+			this->car->HeaderText = L"Машина";
+			this->car->Name = L"car";
+			this->car->ReadOnly = true;
+			// 
 			// tabPage1
 			// 
 			this->tabPage1->Controls->Add(this->button3);
@@ -437,6 +488,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 			this->button1->TabIndex = 12;
 			this->button1->Text = L"Добавить";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// textBox5
 			// 
@@ -727,6 +779,36 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 			this->dataGridView2->Size = System::Drawing::Size(689, 211);
 			this->dataGridView2->TabIndex = 0;
 			// 
+			// fio_i
+			// 
+			this->fio_i->HeaderText = L"ФИО";
+			this->fio_i->Name = L"fio_i";
+			this->fio_i->ReadOnly = true;
+			// 
+			// age_i
+			// 
+			this->age_i->HeaderText = L"Возраст";
+			this->age_i->Name = L"age_i";
+			this->age_i->ReadOnly = true;
+			// 
+			// email_i
+			// 
+			this->email_i->HeaderText = L"Email";
+			this->email_i->Name = L"email_i";
+			this->email_i->ReadOnly = true;
+			// 
+			// phone_i
+			// 
+			this->phone_i->HeaderText = L"Телефон";
+			this->phone_i->Name = L"phone_i";
+			this->phone_i->ReadOnly = true;
+			// 
+			// exp_i
+			// 
+			this->exp_i->HeaderText = L"Стаж";
+			this->exp_i->Name = L"exp_i";
+			this->exp_i->ReadOnly = true;
+			// 
 			// tabPage3
 			// 
 			this->tabPage3->Controls->Add(this->textBox13);
@@ -937,91 +1019,12 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 			this->time_g->ReadOnly = true;
 			this->time_g->Width = 200;
 			// 
-			// fio_i
+			// dateTimePicker1
 			// 
-			this->fio_i->HeaderText = L"ФИО";
-			this->fio_i->Name = L"fio_i";
-			this->fio_i->ReadOnly = true;
-			// 
-			// age_i
-			// 
-			this->age_i->HeaderText = L"Возраст";
-			this->age_i->Name = L"age_i";
-			this->age_i->ReadOnly = true;
-			// 
-			// email_i
-			// 
-			this->email_i->HeaderText = L"Email";
-			this->email_i->Name = L"email_i";
-			this->email_i->ReadOnly = true;
-			// 
-			// phone_i
-			// 
-			this->phone_i->HeaderText = L"Телефон";
-			this->phone_i->Name = L"phone_i";
-			this->phone_i->ReadOnly = true;
-			// 
-			// exp_i
-			// 
-			this->exp_i->HeaderText = L"Стаж";
-			this->exp_i->Name = L"exp_i";
-			this->exp_i->ReadOnly = true;
-			// 
-			// fio_z_k
-			// 
-			this->fio_z_k->HeaderText = L"ФИО курсанта";
-			this->fio_z_k->Name = L"fio_z_k";
-			this->fio_z_k->ReadOnly = true;
-			this->fio_z_k->Width = 150;
-			// 
-			// fio_z_i
-			// 
-			this->fio_z_i->HeaderText = L"ФИО инструктора";
-			this->fio_z_i->Name = L"fio_z_i";
-			this->fio_z_i->ReadOnly = true;
-			this->fio_z_i->Width = 150;
-			// 
-			// type
-			// 
-			this->type->HeaderText = L"Тип занятия";
-			this->type->Name = L"type";
-			this->type->ReadOnly = true;
-			// 
-			// time
-			// 
-			this->time->HeaderText = L"Время";
-			this->time->Name = L"time";
-			this->time->ReadOnly = true;
-			// 
-			// car
-			// 
-			this->car->HeaderText = L"Машина";
-			this->car->Name = L"car";
-			this->car->ReadOnly = true;
-			// 
-			// label20
-			// 
-			this->label20->AutoSize = true;
-			this->label20->Location = System::Drawing::Point(445, 243);
-			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(48, 13);
-			this->label20->TabIndex = 19;
-			this->label20->Text = L"Машина";
-			// 
-			// comboBox4
-			// 
-			this->comboBox4->FormattingEnabled = true;
-			this->comboBox4->Location = System::Drawing::Point(448, 259);
-			this->comboBox4->Name = L"comboBox4";
-			this->comboBox4->Size = System::Drawing::Size(121, 21);
-			this->comboBox4->TabIndex = 18;
-			// 
-			// textBox16
-			// 
-			this->textBox16->Location = System::Drawing::Point(283, 306);
-			this->textBox16->Name = L"textBox16";
-			this->textBox16->Size = System::Drawing::Size(121, 20);
-			this->textBox16->TabIndex = 20;
+			this->dateTimePicker1->Location = System::Drawing::Point(283, 306);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(121, 20);
+			this->dateTimePicker1->TabIndex = 21;
 			// 
 			// MyForm
 			// 
@@ -1054,6 +1057,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ car;
 #pragma endregion
 	private:
 		System::Void constr();
+		System::Void draw_combo();
 		System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

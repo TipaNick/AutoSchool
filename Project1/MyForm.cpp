@@ -55,6 +55,7 @@ int n_k = 4;
 int n_i = 2;
 int n_c = 2;
 int n_g = 1;
+int n_z = 0;
 
 System::Void Project1::MyForm::constr() {
     //Добавим курсантов
@@ -239,7 +240,15 @@ System::Void Project1::MyForm::constr() {
     {
         dataGridView4[1, 0]->Value += Convert::ToString(gd[0].time[i]);
     }
+    draw_combo();
+};
 
+System::Void Project1::MyForm::draw_combo() {
+    //Очистим КомбоБоксы
+    comboBox1->Items->Clear();
+    comboBox2->Items->Clear();
+    comboBox3->Items->Clear();
+    comboBox4->Items->Clear();
     //Добавим в КомбоБоксы
     for (int i = 0; i < n_k; i++)
     {
@@ -270,9 +279,98 @@ System::Void Project1::MyForm::constr() {
         }
         comboBox4->Items->Add(temp);
     }
-};
+}
 
 System::Void Project1::MyForm::MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 {
     constr();
 }
+
+//Кнопка добавить в "Запись"
+System::Void Project1::MyForm::button15_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    if (comboBox1->Text == "" || comboBox2->Text == "" || comboBox3->Text == "" || comboBox4->Text == "")
+    {
+        MessageBox::Show("Запоните все поля", "Ошибка");
+    }
+    else {
+        String^ temp = comboBox1->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            rec[n_z].fio_k[i] += temp[i];
+        }
+        temp = comboBox2->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            rec[n_z].fio_p[i] += temp[i];
+        }
+        temp = comboBox3->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            rec[n_z].type[i] += temp[i];
+        }
+        temp = dateTimePicker1->Value.ToShortDateString();
+        for (int i = 0; i < temp->Length; i++)
+        {
+            rec[n_z].time[i] += temp[i];
+        }
+        temp = comboBox4->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            rec[n_z].car_num[i] += temp[i];
+        }
+
+        dataGridView5->Rows->Add();
+        dataGridView5[0, n_z]->Value = comboBox1->Text;
+        dataGridView5[1, n_z]->Value = comboBox2->Text;
+        dataGridView5[2, n_z]->Value = comboBox3->Text;
+        dataGridView5[3, n_z]->Value = Convert::ToString(dateTimePicker1->Value.ToShortDateString());
+        dataGridView5[4, n_z]->Value = comboBox4->Text;
+        n_z++;
+    }
+}
+
+System::Void Project1::MyForm::button1_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == "" || textBox5->Text == "")
+    {
+        MessageBox::Show("Запоните все поля", "Ошибка");
+    }
+    else {
+        String^ temp = textBox1->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            ks[n_k].fio[i] += temp[i];
+        }
+        
+        ks[n_k].age = Convert::ToInt32(textBox2->Text);
+
+        temp = textBox3->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            ks[n_k].email[i] += temp[i];
+        }
+        temp = textBox4->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            ks[n_k].phone[i] += temp[i];
+        }
+        temp = textBox5->Text;
+        for (int i = 0; i < temp->Length; i++)
+        {
+            ks[n_k].category[i] += temp[i];
+        }
+
+
+        dataGridView1->Rows->Add();
+        dataGridView1[0, n_k]->Value = textBox1->Text;
+        dataGridView1[1, n_k]->Value = textBox2->Text;
+        dataGridView1[2, n_k]->Value = textBox3->Text;
+        dataGridView1[3, n_k]->Value = textBox4->Text;
+        dataGridView1[4, n_k]->Value = textBox5->Text;
+        n_k++;
+        draw_combo();
+    }
+}
+
+
