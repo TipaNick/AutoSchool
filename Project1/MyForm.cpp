@@ -23,6 +23,8 @@ struct kursant {
 } ks[50];
 
 
+///русский
+
 
 
 struct instructor {
