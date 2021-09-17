@@ -1,7 +1,6 @@
 #include "MyForm.h"
 
 #include <Windows.h>
-#include <fstream>
 #include <string>
 
 using namespace Project1; // Название проекта
@@ -39,6 +38,7 @@ struct car
 } cr[50];
 
 struct record {
+    instructor y;
     wchar_t fio_k[150];
     wchar_t fio_p[150];
     wchar_t type[50];
