@@ -23,6 +23,8 @@ struct kursant {
 } ks[50];
 
 
+
+
 struct instructor {
     wchar_t fio[150];
     int age;
