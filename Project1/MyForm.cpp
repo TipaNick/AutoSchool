@@ -1,9 +1,9 @@
-#include "MyForm.h"
+п»ї#include "MyForm.h"
 
 #include <Windows.h>
 #include <string>
 
-using namespace Project1; // Название проекта
+using namespace Project1; // РќР°Р·РІР°РЅРёРµ РїСЂРѕРµРєС‚Р°
 using namespace System;
 using namespace System::Windows::Forms;
 
@@ -23,7 +23,7 @@ struct kursant {
 } ks[50];
 
 
-///русский
+///СЂСѓСЃСЃРєРёР№ 
 
 
 
@@ -62,12 +62,12 @@ int n_g = 1;
 int n_z = 0;
 
 System::Void Project1::MyForm::constr() {
-    //Добавим курсантов
-    wcscpy(ks[0].fio, L"В.А.Смирнов");
+    //Р”РѕР±Р°РІРёРј РєСѓСЂСЃР°РЅС‚РѕРІ
+    wcscpy(ks[0].fio, L"Р’.Рђ.РЎРјРёСЂРЅРѕРІ");
     ks[0].age = 16;
     wcscpy(ks[0].email, L"vas@mail.ru");
     wcscpy(ks[0].phone, L"+79135478586");
-    wcscpy(ks[0].category, L"Б");
+    wcscpy(ks[0].category, L"Р‘");
     dataGridView1->Rows->Add();
     for (int i = 0; i < wcslen(ks[0].fio); i++)
     {
@@ -88,11 +88,11 @@ System::Void Project1::MyForm::constr() {
     }
 
 
-    wcscpy(ks[1].fio, L"Б.Е.Ворунов");
+    wcscpy(ks[1].fio, L"Р‘.Р•.Р’РѕСЂСѓРЅРѕРІ");
     ks[1].age = 18;
     wcscpy(ks[1].email, L"bev@mail.ru");
     wcscpy(ks[1].phone, L"+79232135489");
-    wcscpy(ks[1].category, L"Б");
+    wcscpy(ks[1].category, L"Р‘");
     dataGridView1->Rows->Add();
     for (int i = 0; i < wcslen(ks[1].fio); i++)
     {
@@ -113,11 +113,11 @@ System::Void Project1::MyForm::constr() {
     }
 
 
-    wcscpy(ks[2].fio, L"Д.Е.Сонин");
+    wcscpy(ks[2].fio, L"Р”.Р•.РЎРѕРЅРёРЅ");
     ks[2].age = 17;
     wcscpy(ks[2].email, L"des@mail.ru");
     wcscpy(ks[2].phone, L"+79235498476");
-    wcscpy(ks[2].category, L"Б");
+    wcscpy(ks[2].category, L"Р‘");
     dataGridView1->Rows->Add();
     for (int i = 0; i < wcslen(ks[2].fio); i++)
     {
@@ -138,11 +138,11 @@ System::Void Project1::MyForm::constr() {
     }
 
 
-    wcscpy(ks[3].fio, L"Г.У.Прытко");
+    wcscpy(ks[3].fio, L"Р“.РЈ.РџСЂС‹С‚РєРѕ");
     ks[3].age = 20;
     wcscpy(ks[3].email, L"gup@mail.ru");
     wcscpy(ks[3].phone, L"+79135487898");
-    wcscpy(ks[3].category, L"Б");
+    wcscpy(ks[3].category, L"Р‘");
     dataGridView1->Rows->Add();
     for (int i = 0; i < wcslen(ks[3].fio); i++)
     {
@@ -162,8 +162,8 @@ System::Void Project1::MyForm::constr() {
         dataGridView1[4, 3]->Value += Convert::ToString(ks[3].category[i]);
     }
 
-    //Добавим инструкторов
-    wcscpy(ins[0].fio, L"П.Р.Воронков");
+    //Р”РѕР±Р°РІРёРј РёРЅСЃС‚СЂСѓРєС‚РѕСЂРѕРІ
+    wcscpy(ins[0].fio, L"Рџ.Р .Р’РѕСЂРѕРЅРєРѕРІ");
     ins[0].age = 40;
     wcscpy(ins[0].email, L"prv@mail.ru");
     wcscpy(ins[0].phone, L"+79135468564");
@@ -185,7 +185,7 @@ System::Void Project1::MyForm::constr() {
     dataGridView2[4, 0]->Value += Convert::ToString(ins[0].exp);
 
 
-    wcscpy(ins[1].fio, L"Н.О.Далеков");
+    wcscpy(ins[1].fio, L"Рќ.Рћ.Р”Р°Р»РµРєРѕРІ");
     ins[1].age = 39;
     wcscpy(ins[1].email, L"nod@mail.ru");
     wcscpy(ins[1].phone, L"+79135489532");
@@ -206,8 +206,8 @@ System::Void Project1::MyForm::constr() {
     }
     dataGridView2[4, 1]->Value += Convert::ToString(ins[1].exp);
 
-    //Добавим машины
-    wcscpy(cr[0].num, L"П123ОН 122");
+    //Р”РѕР±Р°РІРёРј РјР°С€РёРЅС‹
+    wcscpy(cr[0].num, L"Рџ123РћРќ 122");
     wcscpy(cr[0].model, L"Subaru Legacy");
     dataGridView3->Rows->Add();
     for (int i = 0; i < wcslen(cr[0].num); i++)
@@ -220,7 +220,7 @@ System::Void Project1::MyForm::constr() {
     }
 
 
-    wcscpy(cr[1].num, L"Р521НО 122");
+    wcscpy(cr[1].num, L"Р 521РќРћ 122");
     wcscpy(cr[1].model, L"Subaru Legacy");
     dataGridView3->Rows->Add();
     for (int i = 0; i < wcslen(cr[1].num); i++)
@@ -232,8 +232,8 @@ System::Void Project1::MyForm::constr() {
         dataGridView3[1, 1]->Value += Convert::ToString(cr[1].model[i]);
     }
 
-    //Добавим ГИБДД
-    wcscpy(gd[0].fio_s, L"П.Е.Порик");
+    //Р”РѕР±Р°РІРёРј Р“РР‘Р”Р”
+    wcscpy(gd[0].fio_s, L"Рџ.Р•.РџРѕСЂРёРє");
     wcscpy(gd[0].time, L"12.09.2021");
     dataGridView4->Rows->Add();
     for (int i = 0; i < wcslen(gd[0].fio_s); i++)
@@ -248,12 +248,12 @@ System::Void Project1::MyForm::constr() {
 };
 
 System::Void Project1::MyForm::draw_combo() {
-    //Очистим КомбоБоксы
+    //РћС‡РёСЃС‚РёРј РљРѕРјР±РѕР‘РѕРєСЃС‹
     comboBox1->Items->Clear();
     comboBox2->Items->Clear();
     comboBox3->Items->Clear();
     comboBox4->Items->Clear();
-    //Добавим в КомбоБоксы
+    //Р”РѕР±Р°РІРёРј РІ РљРѕРјР±РѕР‘РѕРєСЃС‹
     for (int i = 0; i < n_k; i++)
     {
         String^ temp;
@@ -272,8 +272,8 @@ System::Void Project1::MyForm::draw_combo() {
         }
         comboBox2->Items->Add(temp);
     }
-    comboBox3->Items->Add("Практика");
-    comboBox3->Items->Add("Экзамен");
+    comboBox3->Items->Add("РџСЂР°РєС‚РёРєР°");
+    comboBox3->Items->Add("Р­РєР·Р°РјРµРЅ");
     for (int i = 0; i < n_c; i++)
     {
         String^ temp;
@@ -290,12 +290,12 @@ System::Void Project1::MyForm::MyForm_Load(System::Object^ sender, System::Event
     constr();
 }
 
-//Кнопка добавить в "Запись"
+//РљРЅРѕРїРєР° РґРѕР±Р°РІРёС‚СЊ РІ "Р—Р°РїРёСЃСЊ"
 System::Void Project1::MyForm::button15_Click(System::Object^ sender, System::EventArgs^ e)
 {
     if (comboBox1->Text == "" || comboBox2->Text == "" || comboBox3->Text == "" || comboBox4->Text == "")
     {
-        MessageBox::Show("Запоните все поля", "Ошибка");
+        MessageBox::Show("Р—Р°РїРѕРЅРёС‚Рµ РІСЃРµ РїРѕР»СЏ", "РћС€РёР±РєР°");
     }
     else {
         String^ temp = comboBox1->Text;
@@ -333,12 +333,12 @@ System::Void Project1::MyForm::button15_Click(System::Object^ sender, System::Ev
         n_z++;
     }
 }
-//Кнопка добавить в "Курсант"
+//РљРЅРѕРїРєР° РґРѕР±Р°РІРёС‚СЊ РІ "РљСѓСЂСЃР°РЅС‚"
 System::Void Project1::MyForm::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
     if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == "" || textBox5->Text == "")
     {
-        MessageBox::Show("Запоните все поля", "Ошибка");
+        MessageBox::Show("Р—Р°РїРѕРЅРёС‚Рµ РІСЃРµ РїРѕР»СЏ", "РћС€РёР±РєР°");
     }
     else {
         String^ temp = textBox1->Text;
@@ -376,12 +376,12 @@ System::Void Project1::MyForm::button1_Click(System::Object^ sender, System::Eve
         draw_combo();
     }
 }
-//Кнопка добавить в "Инструктор"
+//РљРЅРѕРїРєР° РґРѕР±Р°РІРёС‚СЊ РІ "РРЅСЃС‚СЂСѓРєС‚РѕСЂ"
 System::Void Project1::MyForm::button6_Click(System::Object^ sender, System::EventArgs^ e)
 {
     if (textBox10->Text == "" || textBox9->Text == "" || textBox8->Text == "" || textBox7->Text == "" || textBox6->Text == "")
     {
-        MessageBox::Show("Запоните все поля", "Ошибка");
+        MessageBox::Show("Р—Р°РїРѕРЅРёС‚Рµ РІСЃРµ РїРѕР»СЏ", "РћС€РёР±РєР°");
     }
     else {
         String^ temp = textBox10->Text;
@@ -415,12 +415,12 @@ System::Void Project1::MyForm::button6_Click(System::Object^ sender, System::Eve
         draw_combo();
     }
 }
-//Кнопка добавить в "Машина"
+//РљРЅРѕРїРєР° РґРѕР±Р°РІРёС‚СЊ РІ "РњР°С€РёРЅР°"
 System::Void Project1::MyForm::button9_Click(System::Object^ sender, System::EventArgs^ e)
 {
     if (textBox12->Text == "" || textBox13->Text == "")
     {
-        MessageBox::Show("Введите все поля", "Ошибка");
+        MessageBox::Show("Р’РІРµРґРёС‚Рµ РІСЃРµ РїРѕР»СЏ", "РћС€РёР±РєР°");
     }
     else {
         String^ temp;
@@ -440,12 +440,12 @@ System::Void Project1::MyForm::button9_Click(System::Object^ sender, System::Eve
         draw_combo();
     }
 }
-//Кнопка добавить в "ГИБДД"
+//РљРЅРѕРїРєР° РґРѕР±Р°РІРёС‚СЊ РІ "Р“РР‘Р”Р”"
 System::Void Project1::MyForm::button12_Click(System::Object^ sender, System::EventArgs^ e)
 {
     if (textBox15->Text == "" || textBox14->Text == "")
     {
-        MessageBox::Show("Введите все поля", "Ошибка");
+        MessageBox::Show("Р’РІРµРґРёС‚Рµ РІСЃРµ РїРѕР»СЏ", "РћС€РёР±РєР°");
     }
     else {
         String^ temp;
@@ -465,7 +465,7 @@ System::Void Project1::MyForm::button12_Click(System::Object^ sender, System::Ev
         draw_combo();
     }
 }
-//Кнопка удалить в "Записи"
+//РљРЅРѕРїРєР° СѓРґР°Р»РёС‚СЊ РІ "Р—Р°РїРёСЃРё"
 System::Void Project1::MyForm::button13_Click(System::Object^ sender, System::EventArgs^ e)
 {
     int num = dataGridView5->CurrentCell->RowIndex;
@@ -500,7 +500,7 @@ System::Void Project1::MyForm::button13_Click(System::Object^ sender, System::Ev
         }
     }
 }
-//Кнопка удалить в "Курсант"
+//РљРЅРѕРїРєР° СѓРґР°Р»РёС‚СЊ РІ "РљСѓСЂСЃР°РЅС‚"
 System::Void Project1::MyForm::button3_Click(System::Object^ sender, System::EventArgs^ e)
 {
     int num = dataGridView1->CurrentCell->RowIndex;
@@ -533,7 +533,7 @@ System::Void Project1::MyForm::button3_Click(System::Object^ sender, System::Eve
     }
     draw_combo();
 }
-//Кнопка удалить в "Инструктор"
+//РљРЅРѕРїРєР° СѓРґР°Р»РёС‚СЊ РІ "РРЅСЃС‚СЂСѓРєС‚РѕСЂ"
 System::Void Project1::MyForm::button4_Click(System::Object^ sender, System::EventArgs^ e)
 {
     int num = dataGridView2->CurrentCell->RowIndex;
@@ -563,7 +563,7 @@ System::Void Project1::MyForm::button4_Click(System::Object^ sender, System::Eve
     }
     draw_combo();
 }
-//Кнопка удалить в "Машины"
+//РљРЅРѕРїРєР° СѓРґР°Р»РёС‚СЊ РІ "РњР°С€РёРЅС‹"
 System::Void Project1::MyForm::button7_Click(System::Object^ sender, System::EventArgs^ e)
 {
     int num = dataGridView3->CurrentCell->RowIndex;
@@ -587,7 +587,7 @@ System::Void Project1::MyForm::button7_Click(System::Object^ sender, System::Eve
     }
     draw_combo();
 }
-//Кнопка удалить в "ГИБДД"
+//РљРЅРѕРїРєР° СѓРґР°Р»РёС‚СЊ РІ "Р“РР‘Р”Р”"
 System::Void Project1::MyForm::button10_Click(System::Object^ sender, System::EventArgs^ e)
 {
     int num = dataGridView4->CurrentCell->RowIndex;
